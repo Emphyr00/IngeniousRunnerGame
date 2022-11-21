@@ -5,6 +5,8 @@ using UnityEngine;
 public class SectorCollision : MonoBehaviour
 {
     public bool firstCollision = false;
+    public GameObject section;
+    public int zPos = 60;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,8 @@ public class SectorCollision : MonoBehaviour
         if (firstCollision == false)
         {
             firstCollision = true;
-            Debug.Log("first collision");
+            Instantiate(section, new Vector3(0, 0, zPos), Quaternion.identity);
+            zPos += 30;
         }
     }
 }

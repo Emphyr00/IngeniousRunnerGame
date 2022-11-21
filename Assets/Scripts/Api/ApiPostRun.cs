@@ -38,10 +38,4 @@ public class ApiPostRun : MonoBehaviour
             Debug.Log("Received: " + uwr.downloadHandler.text);
         }
     }
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
 }

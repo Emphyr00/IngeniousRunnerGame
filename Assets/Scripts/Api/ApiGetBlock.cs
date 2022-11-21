@@ -12,7 +12,7 @@ public class ApiGetBlock : MonoBehaviour
     {
         StartCoroutine(getRequest(new Uri("http://localhost:5000/api/block?username=" + username)));
     }
-    IEnumerator getRequest(System.Uri uri)
+    public IEnumerator getRequest(System.Uri uri)
     {
 
         UnityWebRequest uwr = UnityWebRequest.Get(uri);
@@ -27,10 +27,4 @@ public class ApiGetBlock : MonoBehaviour
             Debug.Log("Received: " + uwr.downloadHandler.text);
         }
     }
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-
-    //}
 }
