@@ -9,7 +9,7 @@ public class GenerateSection : MonoBehaviour
     public bool generate = true;
     public GameObject section;
     public GameObject api;
-    public int zPos = 75;
+    public int zPos = ;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +31,7 @@ public class GenerateSection : MonoBehaviour
         Instantiate(section, new Vector3(15, 0, zPos), Quaternion.identity);
         zPos += 60;
         
-        StartCoroutine(api.GetComponent<ApiGetBlock>().getRequest(new Uri("http://localhost:5000/api/block?username=" + "test")));
+        StartCoroutine(api.GetComponent<ApiGetBlock>().getRequest(new Uri("http://localhost:5000/api/block?username=\"" + "test" + "\"")));
         yield return new WaitForSeconds(10);
         generate = true;
         
